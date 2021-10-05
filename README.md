@@ -38,10 +38,8 @@ I've included 5 screenshots in the `/screenshots` folder: fullscreen, desktop, m
 
 ### Links
 
-I'll update these links once I've submitted my solution.
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-using-bem-flexbox-css-grid-and-vanilla-js-8DLgJ5Vm1)
+- [Live Site URL](https://victor-nyagudi.github.io/base-apparel-coming-soon-page/)
 
 ## My process
 
