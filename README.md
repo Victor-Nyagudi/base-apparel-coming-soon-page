@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/base-apparel-coming-soon-fullscreen.png)
+![](./dist/screenshots/base-apparel-coming-soon-fullscreen.png)
 
 I've included 5 screenshots in the `/screenshots` folder: fullscreen, desktop, mobile, tablet top half, and tablet bottom half.
 
@@ -53,7 +53,7 @@ since I used CSS grid for the first time here, and I needed to make sure I had i
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
