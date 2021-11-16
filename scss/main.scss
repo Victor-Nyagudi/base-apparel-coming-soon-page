@@ -1,0 +1,122 @@
+@import './config';
+
+body {
+    font-family: $primary-font;
+    font-weight: getFontWeight('regular');
+    color: getColor('desaturated-red');
+
+    background-image: linear-gradient(135deg, getColor('background-gradient-start'), 
+                                    getColor('background-gradient-end'));
+    margin: 0;
+}
+
+img, 
+source {
+    display: block; 
+    max-width: 100%;
+}
+
+h1, p { margin: 0; }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 610px;
+}
+
+.hero {
+    .logo { padding: 1.8em 10em 1.8em 0; }
+
+    &__content { padding-bottom: 2em; }
+
+    &__text { text-align: center; }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: getFontWeight('semi-bold');
+        color: getColor('dark-grayish-red');
+        
+        letter-spacing: 11px;
+        line-height: 1.05;
+        text-transform: uppercase;
+
+        margin: 1.6em 0 .4em;
+
+        &--pink {
+            font-weight: getFontWeight('light');
+            color: getColor('desaturated-red');
+        }
+    }
+
+    &__message {
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+
+    &__form { margin: 1.75em 0 5em; }
+
+    .form {
+        position: relative;
+
+        input {
+            &:first-of-type {
+                font-family: inherit;
+                font-weight: getFontWeight('semi-bold');
+                color: black;
+                
+                border: 1px solid hsl(0, 36%, 85%);
+                border-radius: $border-radius;
+                
+                background-color: inherit;
+                background-image: url("../images/icon-arrow.svg");
+                background-repeat: no-repeat;
+                background-position: 100% 50%;
+
+                display: block;
+                width: 100%;
+                padding: 1.2em 2em;
+            }
+
+            &:focus {
+                outline: none;
+                border: 2px solid getColor('desaturated-red');
+            }
+
+            &::placeholder {
+                font-weight: getFontWeight('semi-bold');
+                color: getColor('desaturated-red');
+                opacity: .7;
+            }
+
+            &.input-error {
+                border: 2px solid getColor('soft-red');
+                background-image: url('../images/icon-error.svg');
+                background-position: 70% 50%;
+            }
+        }
+
+        .btn {
+            position: absolute;
+            top: 2%;
+            right: 0;
+
+            border-radius: $border-radius;
+            padding: 1em 1.95em;
+            box-shadow: 0 3px 30px hsl(0, 74%, 88%);
+            background-image: linear-gradient(135deg, getColor('button-gradient-start'), 
+                                                getColor('button-gradient-end'));
+
+            &:hover {
+                background-image: linear-gradient(135deg, hsl(0, 80%, 90%), hsl(0, 74%, 85%));
+                box-shadow: 0 11px 18px rgba(148, 24, 24, 0.3);
+            }
+        }
+
+        .emailValidationMessage {
+            color: getColor('soft-red');
+            padding: .5em 2em;
+        }
+    }
+}
+
+@import './responsive';

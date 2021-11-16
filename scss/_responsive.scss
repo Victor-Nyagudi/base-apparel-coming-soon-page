@@ -1,0 +1,133 @@
+@include media-sm {
+    .hero {
+        &__title {
+            font-size: 2.7rem;       
+            margin: 1.8em 0 .6em;
+        }
+
+        &__message { font-size: 1.2em; }
+    }
+
+    .hero {
+        .form {
+            input {
+                &:first-of-type {
+                    font-size: 1rem;
+                    padding: 1em 3.7em 1em 2em;
+                }
+    
+                &.input-error { background-position: 75% 50%; }
+            }
+    
+            .btn {
+                padding: 1.15em 1.95em;
+                top: 1%;
+            }
+        }
+    }
+}
+
+@include media-md {
+    .hero {
+        &__image {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 610px;
+        }
+
+        &__title {
+            font-size: 3.1rem;
+            margin: 1.8em 0 .6em;
+            padding: 0 2em;
+        }
+
+        &__message { font-size: 1.3em; }
+
+        .form { 
+            margin: 3em 0 5em; 
+        
+            input.input-error { background-position: 78% 50%; }
+
+            .btn { 
+                padding: 1.17em 3em;
+                top: 1%;
+            }
+        }
+    }
+}
+
+@include media-lg {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        height: 100vh;
+    }
+
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .grid {
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+            'logo hero__image'
+            'hero__content hero__image'
+        ;
+    }
+
+    .hero {
+        max-width: 100%;
+
+        .logo { 
+            grid-area: logo; 
+            padding: 0 5em;
+        }
+
+        &__content { grid-area: hero__content; }
+
+        &__image {
+            grid-area: hero__image;
+            width: initial;
+            max-width: 100%;
+            
+            margin: 0;
+        }
+
+        &__content { padding: 0; }
+
+        &__text {
+            padding: 0 5em;
+            text-align: left;
+        }
+
+        &__title {
+            font-size: 4rem;
+            letter-spacing: 15px;
+            
+            margin: 0 0 .5em 0;
+            padding: 0;
+        }
+
+        input.input-error { background-position: 75% 50%; }
+    }
+}
+
+@include media-xl {
+    .hero {
+        .logo,
+        &__text {
+            margin-right: 13.7em;
+            padding: 0 0em 0 7em;
+        }
+
+        &__title { padding-right: 4em; }
+    }
+}
